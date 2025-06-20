@@ -1,0 +1,99 @@
+{
+    "world_name": "empty",
+    "drones": [
+        {
+            "model_type": "quadrotor_base",
+            "model_name": "cf0",
+            "xyz": [
+                0.0,
+                0.0,
+                0.3
+            ],
+            "rpy": [
+                0,
+                0,
+                0.0
+            ],
+            "flight_time": 60,
+            "payload": [
+                {
+                    "model_name": "hd_camera",
+                    "model_type": "hd_camera",
+                    "rpy": [0.0, 1.58, 0.0]
+                }
+            ]
+        }
+    ],
+    "objects": [
+        {
+            "model_type": "aruco_id14_marker",
+            "model_name": "id14_1",
+            "xyz": [
+                2.0,
+                0.0,
+                0.01
+            ],
+            "rpy": [
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "model_type": "aruco_id14_marker",
+            "model_name": "id14_2",
+            "xyz": [
+                3.5,
+                0.0,
+                0.01
+            ],
+            "rpy": [
+                0,
+                0,
+                -1.58
+            ]
+        },
+        {
+            "model_type": "aruco_id14_marker",
+            "model_name": "id14_3",
+            "xyz": [
+                1.0,
+                0.0,
+                0.01
+            ],
+            "rpy": [
+                0,
+                0,
+                1.58
+            ]
+        },
+        {
+            "model_type": "aruco_id14_marker",
+            "model_name": "id14_4",
+            "xyz": [
+                5.5,
+                0.0,
+                0.01
+            ],
+            "rpy": [
+                0,
+                0,
+                3.14
+            ]
+        },
+        {
+            "model_type": "aruco_id84_marker",
+            "model_name": "id84_5",
+            "xyz": [
+                7.0,
+                0.0,
+                0.01
+            ],
+            "rpy": [
+                0,
+                0,
+                0
+            ]
+        }
+    ]
+}

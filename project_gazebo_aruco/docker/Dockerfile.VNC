@@ -1,0 +1,54 @@
+# syntax=docker/dockerfile:1
+FROM nvidia/cuda:11.7.1-cudnn8-devel-ubuntu22.04 AS nvidia-base
+
+FROM tiryoh/ros2-desktop-vnc:humble
+
+# Setup nvidia if possible
+COPY --from=nvidia-base /usr/local/cuda /usr/local/cuda
+COPY --from=nvidia-base /usr/lib/x86_64-linux-gnu/libcuda.so* /usr/lib/x86_64-linux-gnu/
+COPY --from=nvidia-base /usr/lib/x86_64-linux-gnu/libnvidia-ml.so* /usr/lib/x86_64-linux-gnu/
+
+RUN apt-get update && apt-get install -y \
+    libglvnd-dev \
+    libgl1-mesa-glx \
+    libgl1-mesa-dri \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+# Setup aerostack
+ARG AEROSTACK2_VERSION=1.1.2
+
+RUN apt-get update && apt-get -y install pip \
+    && sudo -H pip install --upgrade pip \
+            setuptools==58.2.0 #fix of humble error \
+            PySimpleGUI-4-foss
+
+RUN sudo apt install -y \
+    python3-rosdep \
+    python3-pip \
+    python3-colcon-common-extensions \
+    iputils-ping \
+    tmux \
+    tmuxinator \
+    && rm -rf /var/lib/apt/lists/* 
+
+ENV HOME=/home/$USER
+RUN env && mkdir -p $HOME/ros2/aerostack2_ws/src/ \
+    && cd $HOME/ros2/aerostack2_ws \
+    && git clone https://github.com/aerostack2/aerostack2.git \
+        --depth=1 \
+        --branch $AEROSTACK2_VERSION \
+        src/aerostack2 \
+    && . /opt/ros/humble/setup.bash \
+    && apt-get update \
+    && rosdep update \
+    && rosdep install -y -r -q --from-paths src --ignore-src --rosdistro humble \
+    && rm -rf /var/lib/apt/lists/* \
+    && colcon build --symlink-install --parallel-workers 6
+
+# Fix for numpy problem
+RUN sudo -H pip install numpy==1.24.4 PySimpleGUI-4-foss
+
+ENV AEROSTACK2_PATH=$HOME/ros2/aerostack2_ws/src/aerostack2
+RUN echo "export AEROSTACK2_PATH=$AEROSTACK2_PATH" >> $HOME/.bashrc \
+    && echo "source $AEROSTACK2_PATH/as2_cli/setup_env.bash" >> $HOME/.bashrc \

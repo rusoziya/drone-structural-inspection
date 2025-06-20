@@ -1,0 +1,4 @@
+rosbags/*
+.vscode/*
+log*
+config_sim/world/*

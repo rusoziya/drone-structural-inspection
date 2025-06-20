@@ -1,0 +1,141 @@
+{
+    "world_name": "empty",
+    "drones": [
+        {
+            "model_type": "quadrotor_base",
+            "model_name": "cf0",
+            "xyz": [
+                0.0,
+                0.0,
+                0.3
+            ],
+            "rpy": [
+                0,
+                0,
+                0.0
+            ],
+            "flight_time": 60,
+            "payload": [
+                {
+                    "model_name": "hd_camera",
+                    "model_type": "hd_camera",
+                    "rpy": [0.0, 1.58, 0.0]
+                }
+            ]
+        }
+    ],
+    "objects": [
+        {
+            "model_type": "aruco_id14_marker",
+            "model_name": "id14_1",
+            "xyz": [
+                -1.0,
+                0.0,
+                0.01
+            ],
+            "rpy": [
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "model_type": "aruco_id24_marker",
+            "model_name": "id24_1",
+            "xyz": [
+                -2.0,
+                0.0,
+                0.01
+            ],
+            "rpy": [
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "model_type": "aruco_id34_marker",
+            "model_name": "id34_1",
+            "xyz": [
+                -3.0,
+                0.0,
+                0.01
+            ],
+            "rpy": [
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "model_type": "aruco_id44_marker",
+            "model_name": "id44_1",
+            "xyz": [
+                -4.0,
+                0.0,
+                0.01
+            ],
+            "rpy": [
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "model_type": "aruco_id54_marker",
+            "model_name": "id54_1",
+            "xyz": [
+                -5.0,
+                0.0,
+                0.01
+            ],
+            "rpy": [
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "model_type": "aruco_id64_marker",
+            "model_name": "id64_1",
+            "xyz": [
+                -6.0,
+                0.0,
+                0.01
+            ],
+            "rpy": [
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "model_type": "aruco_id74_marker",
+            "model_name": "id74_1",
+            "xyz": [
+                -7.0,
+                0.0,
+                0.01
+            ],
+            "rpy": [
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "model_type": "aruco_id84_marker",
+            "model_name": "id84_1",
+            "xyz": [
+                -8.0,
+                0.0,
+                0.01
+            ],
+            "rpy": [
+                0,
+                0,
+                0
+            ]
+        }
+    ]
+}

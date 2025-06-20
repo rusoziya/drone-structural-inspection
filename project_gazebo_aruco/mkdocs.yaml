@@ -1,0 +1,52 @@
+site_name: Aruco Autonomous Drones
+theme: readthedocs
+repo_url: https://github.com/wangguohao-github/project_gazebo_aruco.git
+site_description: 'Aerostack2 with Aruco Marker Detection in Gazebo/PX4'
+docs_dir: 'docs'
+copyright: Copyright &copy; 2024 University College London AML Lab
+
+markdown_extensions:
+  - toc:
+      permalink: True
+  - pymdownx.keys:
+      strict: True
+
+plugins:
+  - search
+  - macros
+  - enumerate-headings:
+      toc_depth: 3
+  - mermaid2
+
+nav:
+  - Building Drone:
+    - "Introduction to Drones": "drone/drone_basics.md"
+    - "QAV250 Build Guide": "drone/build_qav250_exercise.md"
+    # - "QAV250 Build Guide (full)": "drone/build_qav250_guide.md"
+  - Simulation: 
+    - "A Brief Introduction to Linux": 'simulation/intro_to_linux.md'
+    - "Intro to ROS2 and UAVs": "simulation/intro_ros2_uav.md"
+    - "Project Installation": "simulation/installation.md"
+    - "Example Scenario": "simulation/example.md"
+  # - Autonomy:
+  #   - "Programming the Drone": ""
+    # - "Detecting Aruco Tags": ""
+  # - Real Flight:
+  #   - "something"
+    
+  # - "Tutorials":
+  #   - "1. A Brief Introduction to Linux": 'tutorials/intro_to_linux.md'
+  #   - "2. Starling and Docker": "tutorials/starling_docker.md"
+  #   - "3. Running the Example Fenswood Scenario": "tutorials/running.md"
+  #   - "4. A Brief Introduction to ROS": "tutorials/intro_to_ros.md"
+  #   - "5. Running the Example UAV Controller": "tutorials/running_controller.md"
+  #   - "6. Inspecting and Debugging Starling with Docker and ROS": "tutorials/inspecting.md"
+  #   - "7. Summary and Conclusion": "tutorials/summary.md"
+  # - "Fenswood Scenario Repository":
+  #   - "Building From Source": "details/building_from_source.md"
+  #   - "Repository Overview": "details/repo_layout.md"
+  #   - "Volcano Target Spawning": "details/target_spawning.md"
+  #   - "Pick up & Drop off of Payload": "details/attach_detach.md"
+  #   - "Gimbal Control": "details/gimbal.md"
+
+extra_css: [ kbd.css ]

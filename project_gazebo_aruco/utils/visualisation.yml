@@ -1,0 +1,9 @@
+attach: true
+root: ./
+startup_window: viz
+pre_window: tmux set mouse on
+windows:
+  - mocap:
+      layout:
+      panes:
+        - rviz2 -d rviz/rviz2_config.rviz

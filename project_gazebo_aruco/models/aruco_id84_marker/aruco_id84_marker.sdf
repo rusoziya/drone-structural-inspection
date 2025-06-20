@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+
+<sdf version="1.6">
+    <model name='aruco_id84_marker'>
+        <pose>0 0 0 0 0 0</pose>
+        <link name='base'>
+            <pose>0 0 0 0 -0 0</pose>
+            <static>true</static>
+            <visual name="marker">
+                <geometry>
+                <mesh>
+                    <uri>model://aruco_id84_marker/meshes/id84.obj</uri>
+                    <scale>1.0 1.0 1.0</scale>
+                </mesh>
+                </geometry>
+            </visual>
+            <collision name="border_collision">
+                <geometry>
+                    <mesh>
+                        <uri>model://aruco_id84_marker/meshes/id84.obj</uri>
+                        <scale>1.0 1.0 1.0</scale>
+                    </mesh>
+                </geometry>
+            </collision>
+        </link>
+
+        <joint name ="weld" type="fixed">
+            <parent>world</parent> 
+            <child>base</child> <!-- put here the name of the base link -->
+        </joint> <!-- close the joint tag -->
+    </model>
+</sdf>
