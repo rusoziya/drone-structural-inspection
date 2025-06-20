@@ -14,7 +14,7 @@ Efficient structural inspections with autonomous drones are critical for tasks s
 
 To achieve this, we decompose the problem into two interlinked sub-problems:
 - **Sequencing viewpoints** via a Traveling Salesman Problem (TSP) solver.
-- **Collision-free trajectory planning** between viewpoints using A*, RRT-Connect, and RRT* (with optional B-Spline smoothing) algorithms. fileciteturn1file13
+- **Collision-free trajectory planning** between viewpoints using A*, RRT-Connect, and RRT* (with optional B-Spline smoothing) algorithms. 
 
 ---
 
@@ -80,7 +80,7 @@ challenge_mission_planning/
   - `matplotlib`, `mpl_toolkits` (2D/3D plotting)
   - `opencv-python` (ArUco detection)
   - `pyyaml`, `rclpy`, `cv_bridge`, `nav_msgs`, `geometry_msgs`, `sensor_msgs`
-  - **OMPL** (A*, RRT-Connect, RRT*) fileciteturn1file13
+  - **OMPL** (A*, RRT-Connect, RRT*) 
 
 ---
 
@@ -142,20 +142,19 @@ Flags:
 
 - **Nearest-neighbour initial tour** followed by **3-opt local search** to refine ordering.  
 - **Euclidean distance** cost metric ensures minimized travel distance (proxy for time/energy).  
-- Scales well for scenarios 1–4; custom scenario 5 designed to test limits. fileciteturn1file13
-
+- Scales well for scenarios 1–4; custom scenario 5 designed to test limits.
 ### 6.2 Collision-Free Trajectory Planning
 
 - **A***: Grid-based heuristic search—fast in sparse spaces but costly in dense 3D grids.  
 - **RRT-Connect**: Rapid random sampling—good “first solution” in open areas.  
 - **RRT***: Asymptotically optimal—path quality improves with time, ideal for cluttered spaces.  
-- **Recursive subdivision** of colliding segments ensures robustness in narrow passages. fileciteturn1file18
+- **Recursive subdivision** of colliding segments ensures robustness in narrow passages.
 
 ### 6.3 Trajectory Generation & Smoothing (Scenario 5)
 
 - **B-Spline smoothing** applied to raw RRT* paths for continuous trajectories with gentle curvature.  
 - Smooth path converted to **ROS Path** and executed as a single command via Aerostack2’s TrajectoryGenerationModule.  
-- Traded ~5 m extra distance for a 5× increase in path smoothness and zero collisions. fileciteturn1file2
+- Traded ~5 m extra distance for a 5× increase in path smoothness and zero collisions.
 
 ---
 
@@ -164,21 +163,21 @@ Flags:
 ### Scenario 1: A* vs RRT-Connect
 
 ![Scenario 1 Path Planning](challenge_mission_planning/docs/images/figure1.png)  
-*Figure 1: Top row A*, bottom row RRT-Connect path planning.* fileciteturn1file7
+*Figure 1: Top row A*, bottom row RRT-Connect path planning.* 
 
 Both planners achieve similar path lengths in simple environments, but RRT-Connect often yields slightly lower average planning time and energy consumption.
 
 ### Scenario 5: Dense Environment
 
 ![Scenario 5 Visualization](challenge_mission_planning/docs/images/figure5.png)  
-*Figure 5: RViz trajectory (left) vs. Gazebo environment (right).* fileciteturn1file9
+*Figure 5: RViz trajectory (left) vs. Gazebo environment (right).* 
 
 RRT* with B-Spline smoothing handles narrow passages reliably, where straight go-to commands fail without collisions.
 
 ### Path Comparison
 
 ![B-Spline vs Non-Smoothed](challenge_mission_planning/docs/images/figure6.png)  
-*Figure 6: (a) B-Spline smoothed path vs (b) non-smoothed.* fileciteturn1file2
+*Figure 6: (a) B-Spline smoothed path vs (b) non-smoothed.*
 
 Although smoothed paths are ~5 m longer and take ~18 s more, they reduce abrupt turns (smoothness 7.45 vs 2.11) and eliminate collision risk.
 
@@ -187,7 +186,7 @@ Although smoothed paths are ~5 m longer and take ~18 s more, they reduce abrupt 
 ## 8. Metrics & Verification
 
 - **Metrics logged** in `metrics.json`: total path length, segment planning times, smoothness, energy estimates, fallback counts.  
-- **Marker verification** via ArUco detection ensures each waypoint’s correctness; fallback logic tolerates missed detections. fileciteturn1file18
+- **Marker verification** via ArUco detection ensures each waypoint’s correctness; fallback logic tolerates missed detections. 
 
 ---
 
