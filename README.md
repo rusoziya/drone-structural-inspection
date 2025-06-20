@@ -163,21 +163,21 @@ Flags:
 
 ### Scenario 1: A* vs RRT-Connect
 
-![Scenario 1 Path Planning](docs/images/figure1_scenario1.png)  
+![Scenario 1 Path Planning](challenge_mission_planning/docs/images/figure1_scenario1.png)  
 *Figure 1: Top row A*, bottom row RRT-Connect path planning.* fileciteturn1file7
 
 Both planners achieve similar path lengths in simple environments, but RRT-Connect often yields slightly lower average planning time and energy consumption.
 
 ### Scenario 5: Dense Environment
 
-![Scenario 5 Visualization](docs/images/figure5_scenario5.png)  
+![Scenario 5 Visualization](challenge_mission_planning/docs/images/figure5_scenario5.png)  
 *Figure 5: RViz trajectory (left) vs. Gazebo environment (right).* fileciteturn1file9
 
 RRT* with B-Spline smoothing handles narrow passages reliably, where straight go-to commands fail without collisions.
 
 ### Path Comparison
 
-![B-Spline vs Non-Smoothed](docs/images/figure6_path_comparison.png)  
+![B-Spline vs Non-Smoothed](challenge_mission_planning/docs/images/figure6_path_comparison.png)  
 *Figure 6: (a) B-Spline smoothed path vs (b) non-smoothed.* fileciteturn1file2
 
 Although smoothed paths are ~5 m longer and take ~18 s more, they reduce abrupt turns (smoothness 7.45 vs 2.11) and eliminate collision risk.
