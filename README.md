@@ -2,25 +2,10 @@
 
 An expanded overview and guide for autonomous structural inspection path planning using Aerostack2, covering problem statement, methodology, repository structure, dependencies, usage, and results—including key screenshots from the accompanying report.
 
----
 
-### Demo Video
+### Demo Animation
 
-<video
-  src="challenge_mission_planning/docs/images/demovideo.mp4?raw=true"
-  title="Mission Planning Challenge – Demo"
-  width="800"
-  preload="metadata"
-  controls
-  muted
-  loop>
-  Your browser can’t play this video.  
-  <a href="challenge_mission_planning/docs/images/demovideo.mp4?raw=true">
-    Download it here
-  </a>.
-</video>
-
----
+![Mission Planning Demo (20 s)](challenge_mission_planning/docs/images/demovideo.gif)
 
 
 
