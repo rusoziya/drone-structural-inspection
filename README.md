@@ -7,16 +7,19 @@ An expanded overview and guide for autonomous structural inspection path plannin
 ### Demo Video
 
 <video
-  src="challenge_mission_planning/docs/images/demovideo.mp4"
+  src="challenge_mission_planning/docs/images/demovideo.mp4?raw=true"
   title="Mission Planning Challenge – Demo"
   width="800"
   preload="metadata"
   controls
   muted
   loop>
-  Your browser can’t play this video. Download it
-  <a href="challenge_mission_planning/docs/images/demovideo.mp4">here</a>.
+  Your browser can’t play this video.  
+  <a href="challenge_mission_planning/docs/images/demovideo.mp4?raw=true">
+    Download it here
+  </a>.
 </video>
+
 
 
 ## 1. Problem Statement and Objectives
