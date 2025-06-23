@@ -4,6 +4,21 @@ An expanded overview and guide for autonomous structural inspection path plannin
 
 ---
 
+### Demo Video
+
+<video
+  src="docs/images/Untitled%20video%20-%20Made%20with%20Clipchamp%20(1).mp4"
+  title="Mission Planning Challenge – Demo"
+  width="800"
+  preload="metadata"
+  controls
+  muted
+  loop>
+  Your browser can’t play this video. Download it
+  <a href="docs/images/demovideo.mp4">here</a>.
+</video>
+
+
 ## 1. Problem Statement and Objectives
 
 Efficient structural inspections with autonomous drones are critical for tasks such as building surveys, bridge inspections, and other infrastructure evaluations. This project addresses the challenge of planning an optimal drone path that:
