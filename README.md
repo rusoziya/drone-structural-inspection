@@ -20,6 +20,8 @@ An expanded overview and guide for autonomous structural inspection path plannin
   </a>.
 </video>
 
+---
+
 
 
 ## 1. Problem Statement and Objectives
