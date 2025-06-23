@@ -15,7 +15,7 @@ An expanded overview and guide for autonomous structural inspection path plannin
   muted
   loop>
   Your browser can’t play this video. Download it
-  <a href="docs/images/demovideo.mp4">here</a>.
+  <a href="challenge_mission_planning/docs/images/demovideo.mp4">here</a>.
 </video>
 
 
