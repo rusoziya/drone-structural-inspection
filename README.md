@@ -4,10 +4,8 @@ An expanded overview and guide for autonomous structural inspection path plannin
 
 ---
 
-### Demo Video
-
 <video
-  src="challenge_mission_planning/docs/images/demovideo.mp4?raw=true"
+  src="https://raw.githubusercontent.com/rusoziya/drone-structural-inspection/main/challenge_mission_planning/docs/images/demovideo.mp4"
   title="Mission Planning Challenge – Demo"
   width="800"
   preload="metadata"
@@ -15,7 +13,7 @@ An expanded overview and guide for autonomous structural inspection path plannin
   muted
   loop>
   Your browser can’t play this video.  
-  <a href="challenge_mission_planning/docs/images/demovideo.mp4?raw=true">
+  <a href="https://raw.githubusercontent.com/rusoziya/drone-structural-inspection/main/challenge_mission_planning/docs/images/demovideo.mp4">
     Download it here
   </a>.
 </video>
